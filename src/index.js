@@ -1,12 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./pages/App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
+import { QueryClientProvider } from "react-query";
+import { queryClient } from "./api";
+import theme from './utils/theme'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <ChakraProvider theme={theme}>
+      <ColorModeScript initialColorMode={theme.config.initalColorMode} />
+        <Router>
+          <Routes>
+            <Route path="/" element={<App />}></Route>
+          </Routes>
+        </Router>
+      </ChakraProvider>
+    </QueryClientProvider>
   </React.StrictMode>
 );
 
