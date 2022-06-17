@@ -4,7 +4,7 @@ import {RiUserSettingsLine, RiUser3Line} from 'react-icons/ri'
 const ProfileBox = () => {
   return (
     <>
-      <Flex bg='brandpurple.200' w={300} h={'180px'} borderRadius={"15"}>
+      <Flex bg='brandpurple.200'  h={200} borderRadius={"15"}>
       </Flex>
     </>
   );
