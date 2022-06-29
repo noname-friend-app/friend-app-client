@@ -21,14 +21,18 @@ const ProfileBox = () => {
           />
           <Heading ml={5}>Alex</Heading>
         </Flex>
-        <Flex w={100} alignSelf='center' flexDir='column'>
-          <Flex _hover={{cursor: 'pointer', color: 'brandpurple.100'}}  mt={3} >
+        <Flex w={100} alignSelf="center" flexDir="column">
+          <Flex _hover={{ cursor: "pointer", color: "brandpurple.100" }} mt={3}>
             <Icon h={35} w={30} as={RiUser3Line} size="20px" />
-            <Text  fontWeight={'600'} alignSelf={'center'} ml={2}>Profile</Text>
+            <Text fontWeight={"600"} alignSelf={"center"} ml={2}>
+              Profile
+            </Text>
           </Flex>
-          <Flex _hover={{cursor: 'pointer', color: 'brandpurple.100'}}>
+          <Flex _hover={{ cursor: "pointer", color: "brandpurple.100" }}>
             <Icon h={35} w={30} as={RiUserSettingsLine} size="20px" />
-            <Text  fontWeight={'600'} alignSelf={'center'} ml={2}>Settings</Text>
+            <Text fontWeight={"600"} alignSelf={"center"} ml={2}>
+              Settings
+            </Text>
           </Flex>
         </Flex>
       </Flex>

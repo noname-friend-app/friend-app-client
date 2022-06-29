@@ -1,9 +1,9 @@
 import { Flex, useColorModeValue } from "@chakra-ui/react";
-import GroupBox from "../components/groupBox";
-import InfoBar from "../components/infoBar";
-import MemberBox from "../components/memberBox";
+import GroupBox from "../components/GroupBox";
+import InfoBar from "../components/InfoBar";
+import MemberBox from "../components/MemberBox";
 import { Outlet } from "react-router-dom";
-import ProfileBox from "../components/profileBox";
+import ProfileBox from "../components/ProfileBox";
 
 const App = () => {
   return (

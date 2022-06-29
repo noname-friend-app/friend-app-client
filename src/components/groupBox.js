@@ -1,6 +1,6 @@
 import { Heading, Flex } from "@chakra-ui/react";
-import Button from "./button";
-import GroupCard from "./groupCard";
+import Button from "./Button";
+import GroupCard from "./GroupCard";
 
 const GroupBox = () => {
   return (
