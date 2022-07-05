@@ -6,21 +6,26 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import { QueryClientProvider } from "react-query";
 import { queryClient } from "./api";
-import theme from './utils/theme'
+import theme from "./utils/theme";
+import { UserProvider } from "./utils/UserContext";
+import Login from "./pages/Auth/Login";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <ChakraProvider theme={theme}>
-      <ColorModeScript initialColorMode={theme.config.initalColorMode} />
-        <Router>
-          <Routes>
-            <Route path="/" element={<App />}></Route>
-          </Routes>
-        </Router>
-      </ChakraProvider>
+      <UserProvider>
+        <ChakraProvider theme={theme}>
+          <ColorModeScript initialColorMode={theme.config.initalColorMode} />
+          <Router>
+            <Routes>
+              <Route path="/" element={<App />}></Route>
+              <Route exact path="/login" element={<Login />} />
+            </Routes>
+          </Router>
+        </ChakraProvider>
+      </UserProvider>
     </QueryClientProvider>
   </React.StrictMode>
 );

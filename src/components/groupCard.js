@@ -1,6 +1,6 @@
 import { Flex, Text } from "@chakra-ui/react";
 
-const GroupCard = ({ name="The three friendly idiots", index }) => {
+const GroupCard = ({ name="Group 1", index }) => {
   return (
     <>
       <Flex
